@@ -54,4 +54,5 @@ if response.status_code == 200:
     else:
         print(f"Failed to update documentation: {update_response.status_code}")
 else:
+    print(f"Failed url: {url}")
     print(f"Failed to fetch file details: {response.status_code}")
