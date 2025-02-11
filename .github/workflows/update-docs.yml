@@ -17,17 +17,15 @@ jobs:
 
       - name: Run documentation update script
         run: |
-          ls
-          ls src
-          ls src/gpt-scripts
           python3 src/gpt-scripts/update_docs.py  # Custom Python script that uses the GitHub API
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add docs/*
-          git commit -m "Automated documentation update"
-          git push
+        ### Don't need to do this - the update_docs.py makes changes directly to github
+        #run: |
+        #  git config --global user.name "github-actions"
+        #  git config --global user.email "github-actions@github.com"
+        #  git add docs/*
+        # git commit -m "Automated documentation update"
+        #  git push
