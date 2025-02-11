@@ -57,7 +57,8 @@ if response.status_code == 200:
         print(f"Failed to update documentation: {update_response.status_code}")
 else:
     # If the file doesn't exist (404 error), create a new file
-    print(f"File not found. Creating new file at {file_path}.")
+    print(f"File not found. URL {url}.")
+    print(f"Creating new file at {file_path}.")
 
     # Data to be sent to GitHub API to create a new file
     create_data = {
