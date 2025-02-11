@@ -1,5 +1,5 @@
 
-# Functional Requirements for MyApp
+# Functional Requirements for Obitify
 
 ## 1. User Authentication
 - **Feature**: Users must be able to log in and log out.
