@@ -9,7 +9,7 @@ token = os.getenv('GITHUB_TOKEN')  # GitHub token (from the workflow environment
 file_path = "docs/requirements.md"  # Path to the markdown file you want to update
 
 # GitHub API endpoint for accessing a file
-url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{file_path}?ref=main"
+url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{file_path}?ref=master"
 
 # Headers for GitHub API request
 headers = {
