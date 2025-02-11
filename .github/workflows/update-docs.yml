@@ -1,0 +1,28 @@
+name: Update Documentation
+
+on:
+  push:
+    branches:
+      - main
+  issue_comment:
+    types: [created]
+
+jobs:
+  update_docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run documentation update script
+        run: |
+          python3 update_docs.py  # Custom Python script that uses the GitHub API
+          
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add docs/*
+          git commit -m "Automated documentation update"
+          git push
