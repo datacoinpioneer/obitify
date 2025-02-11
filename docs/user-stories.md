@@ -1,4 +1,4 @@
-# User Stories for MyApp
+# User Stories for Obitify
 
 ## 1. User Login
 - **As a** user,
