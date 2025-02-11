@@ -17,7 +17,6 @@ jobs:
 
       - name: Run documentation update script
         run: |
-          ls
           python3 src/gpt-scripts/update_docs.py  # Custom Python script that uses the GitHub API
           
       - name: Commit and push changes
