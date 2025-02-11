@@ -17,6 +17,9 @@ jobs:
 
       - name: Run documentation update script
         run: |
+          ls
+          ls scr
+          ls src/gpt-scripts
           python3 src/gpt-scripts/update_docs.py  # Custom Python script that uses the GitHub API
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
