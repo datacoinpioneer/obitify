@@ -5,7 +5,7 @@ import os
 # GitHub Repository Information
 repo_owner = "datacoin-pioneer"  # Replace with your GitHub username or organization
 repo_name = "obitify"  # Replace with your GitHub repository name
-token = os.getenv('ACCESS_TOKEN')  # GitHub token (set this in your GitHub Actions secrets)
+token = os.getenv('GITHUB_TOKEN')  # GitHub token (set this in your GitHub Actions secrets)
 file_path = "docs/requirements.md"  # Path to the markdown file you want to update
 
 # GitHub API endpoint for accessing a file
