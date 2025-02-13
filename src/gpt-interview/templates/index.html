@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Bot</title>
+    <script>
+        // Function to handle sending the response to the Flask backend
+        async function submitResponse() {
+            const response = document.getElementById("userResponse").value;
+            const questionNumber = parseInt(document.getElementById("questionNumber").value);
+
+            const data = {
+                response: response,
+                question_number: questionNumber
+            };
+
+            // Send the response to the Flask backend
+            const res = await fetch("/submit_response", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+            const jsonResponse = await res.json();
+
+            // Show the follow-up question or next interview question
+            if (jsonResponse.follow_up_question) {
+                document.getElementById("followUpQuestion").textContent = "Follow-up: " + jsonResponse.follow_up_question;
+            } else {
+                document.getElementById("followUpQuestion").textContent = "";
+            }
+
+            // Display the next question or a message that the interview is complete
+            if (jsonResponse.message) {
+                document.getElementById("questionText").textContent = jsonResponse.message;
+            } else {
+                document.getElementById("questionText").textContent = jsonResponse.question;
+                document.getElementById("questionNumber").value = jsonResponse.question_number;
+            }
+
+            // Clear the input field for the next response
+            document.getElementById("userResponse").value = "";
+        }
+
+        // Function to start the interview
+        async function startInterview() {
+            const res = await fetch("/start_interview", {
+                method: "GET"
+            });
+            const jsonResponse = await res.json();
+            document.getElementById("questionText").textContent = jsonResponse.question;
+            document.getElementById("questionNumber").value = jsonResponse.question_number;
+        }
+
+        // Start the interview when the page is loaded
+        window.onload = startInterview;
+    </script>
+</head>
+<body>
+    <h1>Interview Bot</h1>
+    <div id="questionSection">
+        <p id="questionText"></p>
+        <input type="text" id="userResponse" placeholder="Your response">
+        <button onclick="submitResponse()">Submit</button>
+    </div>
+
+    <div id="followUpSection">
+        <p id="followUpQuestion"></p>
+    </div>
+
+    <input type="hidden" id="questionNumber">
+
+</body>
+</html>

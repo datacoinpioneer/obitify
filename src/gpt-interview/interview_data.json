@@ -1,0 +1,110 @@
+{
+    "response": "I want to build an online version of the arcade game Pong",
+    "entities": {
+        "features": [],
+        "platforms": [
+            "Pong"
+        ],
+        "goals": []
+    },
+    "follow_up_question": "What specific features or functionalities are you looking to include in your online version of Pong?"
+}
+{
+    "response": "I want to create an online version of pong like the arcade game",
+    "entities": {
+        "features": [],
+        "platforms": [],
+        "goals": []
+    },
+    "follow_up_question": "What specific features or functionalities are you looking to include in your online version of Pong?"
+}
+{
+    "response": "A chicken",
+    "entities": {
+        "features": [],
+        "platforms": [],
+        "goals": []
+    },
+    "follow_up_question": "\"Are you referring to a live chicken, a chicken dish, or something else related to chickens?\""
+}
+{
+    "response": "A live chicken",
+    "entities": {
+        "features": [],
+        "platforms": [],
+        "goals": []
+    },
+    "follow_up_question": "\"What specific information are you looking for about the live chicken?\""
+}
+{
+    "response": "the chicken is the paddle for the pong",
+    "entities": {
+        "features": [],
+        "platforms": [],
+        "goals": []
+    },
+    "follow_up_question": "Can you explain what you mean by \"the chicken is the paddle for the pong\"? Are you referring to a specific game or concept?"
+}
+{
+    "response": "I want to build an online version of the arcade game pong",
+    "entities": {
+        "features": [],
+        "platforms": [],
+        "goals": []
+    },
+    "follow_up_question": "What specific features or elements of the original Pong do you want to include in your online version?"
+}
+{
+    "response": "A two player game, where each player has a paddle and hit the ball/pong to each other",
+    "entities": {
+        "features": [],
+        "platforms": [],
+        "goals": []
+    },
+    "follow_up_question": "What are the specific rules or objectives of the game?"
+}
+{
+    "response": "You move your paddle left to right. If you hit the ball it goes back to the other player, if you miss you lose the point.",
+    "entities": {
+        "features": [],
+        "platforms": [],
+        "goals": []
+    },
+    "follow_up_question": "What type of game are you describing where you hit the ball with a paddle?"
+}
+{
+    "response": "Pong",
+    "entities": {
+        "features": [],
+        "platforms": [],
+        "goals": []
+    },
+    "follow_up_question": "What specific aspect of \"Pong\" are you referring to\u2014its history, gameplay, or its impact on video games?"
+}
+{
+    "response": "gameplay",
+    "entities": {
+        "features": [],
+        "platforms": [],
+        "goals": []
+    },
+    "follow_up_question": "Could you specify what aspects of gameplay you are referring to, such as mechanics, narrative, or player experience?"
+}
+{
+    "response": "player experience",
+    "entities": {
+        "features": [],
+        "platforms": [],
+        "goals": []
+    },
+    "follow_up_question": "What specific aspects of 'player experience' are you referring to, such as gameplay mechanics, user interface, or community interactions?"
+}
+{
+    "response": "A webpage that prints 'HEllo World'",
+    "entities": {
+        "features": [],
+        "platforms": [],
+        "goals": []
+    },
+    "follow_up_question": "What programming language or technology are you referring to for creating the webpage that prints 'Hello World'?"
+}
